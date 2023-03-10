@@ -1,0 +1,145 @@
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  user-select: none;
+  overflow: hidden;
+}
+
+#notifications-container {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  background: rgb(50, 52, 54);
+}
+
+.notification i {
+  position: reltive;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* NOTIFICATION COLORS */
+.notification-info .notification-progress-bar {
+  background: rgb(51, 156, 218);
+}
+
+.notification-info i {
+  color: rgb(51, 156, 218);
+}
+
+.notification-success .notification-progress-bar {
+  background: rgb(38, 158, 62);
+}
+
+.notification-success i {
+  color: rgb(38, 158, 62);
+}
+
+.notification-warning .notification-progress-bar {
+  background: rgb(198, 201, 25);
+}
+
+.notification-warning i {
+  color: rgb(198, 201, 25);
+}
+
+.notification-error .notification-progress-bar {
+  background: rgb(240, 75, 75);
+}
+
+.notification-error i {
+  color: rgb(240, 75, 75);
+}
+
+.notification {
+  position: relative;
+  max-width: 400px;
+}
+
+/* NOTIFICATION ALIGNS */
+
+.align-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.align-bottom-center {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
+}
+
+.align-top-center {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -0%);
+}
+
+.align-top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 100%;
+}
+
+.align-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 100%;
+}
+
+.align-bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.align-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.notification-progress-bar {
+  height: 5px;
+  width: 100%;
+  background-color: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.notification-progress-bar::before {
+  content: "";
+  height: 5px;
+  width: 0%;
+  background-color: #4caf50;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
